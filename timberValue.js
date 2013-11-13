@@ -10,7 +10,7 @@ function TimberPatch(type, boardFeet, manhours, employees) = {
   function getRate(type) {
     //scrape web for currentMarketRate using type
     //currentMarketRate = scrapeValue
-  }
+  };
 
   this.value = function( currentMarketRate, boardFeet, laborCost, fuel) {
     return ((currentMarketRate * boardFeet) - (laborCost + fuel))
