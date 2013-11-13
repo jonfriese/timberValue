@@ -4,13 +4,16 @@ function TimberPatch(type, boardFeet, manhours, employees) = {
   this.manhours = manhours;
   this.employees = employees;
 
-  //scrape web for currentMarketRate
-  var typeValue = type * currentMarketRate;
   var laborCost = (manhours * 30);
   var fuel      = (manhours/employees) * 20;
+  var currentMarketRate;
+  function getRate(type) {
+    //scrape web for currentMarketRate using type
+    //currentMarketRate = scrapeValue
+  }
 
-  this.value = function( typeValue, boardFeet, laborCost, fuel) {
-    return ((typeValue * boardFeet) - (laborCost + fuel))
+  this.value = function( currentMarketRate, boardFeet, laborCost, fuel) {
+    return ((currentMarketRate * boardFeet) - (laborCost + fuel))
   };
 
   this.toString = function () {
