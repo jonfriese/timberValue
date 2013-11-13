@@ -9,8 +9,8 @@ function TimberPatch(type, boardFeet, manhours, employees) = {
   var laborCost = (manhours * 30);
   var fuel      = (manhours/employees) * 20;
 
-  this.value = function() {
-    return ((typeValue * boardFeet) - laborCost)
+  this.value = function( typeValue, boardFeet, laborCost, fuel) {
+    return ((typeValue * boardFeet) - (laborCost + fuel))
   };
 
   this.toString = function () {
